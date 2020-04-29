@@ -1,0 +1,483 @@
+<!DOCTYPE HTML5>
+<html>
+<head>
+<title>Daisy Shu</title>
+<link rel="stylesheet" type="text/css" href="website.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Yeseva One|Noto Sans JP|Inria Serif|Sigmar One|Special Elite|Chonburi|Oleo Script Swash Caps
+|Lily Script One|Katibeh|Raleway|Elsie Swash Caps|Jomolhari|Century Gothic|Franklin Gothic|Futura|Didot|Croissant One|Frank Ruhl Libre
+|B612|Crimson|Playfair Display|Spectral|Cormorant|Varela|Rouge Script|Lobster|Abril Fatface|Lato|Old Standard TT" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="HandheldFriendly" content="true"> -->
+</head>
+
+<body>
+
+  <header id="header">
+    <div id="logo"><a href="">Daisy Shu</a></div>
+      <nav id="nav">
+        <a href="#welcome" class="active" title="Home">Home</a>
+        <a href="#intro" class ="notbutton" title="About Me">About Me</a>
+        <a href="#education" class ="notbutton" title="Education">Education</a>
+        <div class="dropdown" id="all">
+          <button class="dropbtn" id="button"><a href="#experience" title="Experience">Experience</a></button>
+          <div class="dropdown-content" id="drop">
+            <a href="#work" class="button" title="Work Experience">Work Experience</a>
+            <a href="#projects" class="button" title="Projects">Projects</a>
+            <a href="#leadership" class="button" title="Leadership">Leadership</a>
+            <a href="#skills" class="button" title="Skills">Skills</a>
+          </div>
+        </div>
+        <a href="#contact-me" class ="notbutton" title="Contact Me">Contact Me</a>
+      </nav>
+
+      <script type="text/javascript">
+
+      // $('#nav a').click(function(event) {
+      //     $('#nav a').removeClass('active');
+      //     $(this).addClass('active');
+      // });
+
+      $(document).ready(function () {
+      $(document).on("scroll", onScroll);
+        
+      //smoothscroll
+      $('a[href^="#"]').on('click', function (e) {
+          e.preventDefault();
+          $(document).off("scroll");
+            
+          $('a').each(function () {
+              $(this).removeClass('active');
+          })
+          $(this).addClass('active');
+
+          var target = this.hash,
+              menu = target;
+          $target = $(target);
+          $('html, body').stop().animate({
+              'scrollTop': $target.offset().top+2
+            }, 650, 'swing', function () {
+              window.location.hash = target;
+              $(document).on("scroll", onScroll);
+          });
+      });
+  });
+
+      function onScroll(event){
+        var scrollPos = $(document).scrollTop();
+        $('#nav a').each(function () {
+          var refElement = $($(this).attr("href"));
+          
+          $("#drop").mouseenter(function() {
+            $("#button a").addClass("active");
+          });
+          $("#drop").mouseleave(function() {
+            $("#button a").removeClass("active");
+          });
+
+          if (refElement.position().top <= scrollPos +10 && refElement.position().top + refElement.height() > scrollPos) {
+            $('#nav a').removeClass('active');
+            $(this).addClass('active');
+          } else if ($("#all a").hasClass("active")) {
+            $("#button a").addClass("active");
+            $("#all a").mouseleave(function() {
+              $("#button a").addClass("active");
+            });
+          } else {
+            $(this).removeClass('active');
+            $("#button a").removeClass("active");
+          }
+        });
+
+      }
+        </script>
+
+      </div>
+  </header>
+
+
+  <div id="welcome">
+    <h1 class="title">Hi, I'm Daisy.</h1>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script>
+    var textWrapper = document.querySelector('.title');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+    anime.timeline({loop: true})
+      .add({
+        targets: '.title .letter',
+        translateX: [30,0],
+        translateZ: 0,
+        opacity: [0,1],
+        easing: "easeOutExpo",
+        duration: 2700,
+        delay: (el, i) => 500 + 30 * i
+      }).add({
+        targets: '.title .letter',
+        translateX: [0, -30],
+        opacity: [1,0],
+        easing: "easeInExpo",
+        duration: 1600,
+        delay: (el, i) => 100 + 30 * i
+      });
+  </script>
+    <a href="#intro"><span></span>About Me</a>
+  </div>
+
+
+  <div id="intro">
+    <h1 class="welcome">Welcome!</h1>
+      <img class="profile-pic" src="images/profile_pic.jpg"/>
+      <h1 class="name">Daisy Shu</h1>
+      <h2 class="resume"><a href="file:///Users/daisyshu/Downloads/Resume.pdf" target="_blank">Here is my resume</a></h2>
+      <div id="hide" class="BeforeScroll">
+      <h2 class="subtitle">Computer Science student, web developer, technology and business enthusiast.</h2>
+      </div>
+  </div>
+
+
+<script type = "text/javascript">
+$(document).ready(function(){
+  //Take your div into one js variable
+  var div = $("#hide");
+  //Take the current position (vertical position from top) of your div in the variable
+  var pos = div.position();
+  //Now when scroll event trigger do following
+  $(window).scroll(function () {
+   var windowpos = $(window).scrollTop();
+   //Now if you scroll more than 100 pixels vertically change the class to AfterScroll
+   // I am taking 100px scroll, you can take whatever you need
+   if (windowpos >= (pos.top - 100)) {
+     div.addClass("AfterScroll");
+   }
+   //If scroll is less than 100px, remove the class AfterScroll so that your content will be hidden again
+   else {
+     s.removeClass("AfterScroll");
+   }
+   //Note: If you want the content should be shown always once you scroll and do not want to hide it again when go to top agian, no need to write the else part
+ });
+});
+</script>
+
+
+  <div id="education">
+    <div class="child">
+    <h1 class="header">Education</h1>
+    <div class="education">
+
+      <div class="school">
+        <p class="college-intro">I am a rising junior studying <a href="https://www.cs.cornell.edu/" target="_blank">Computer Science</a> in the <a href="https://www.engineering.cornell.edu/" target="_blank">College of Engineering</a> at <a href="https://www.cornell.edu/" target="_blank">Cornell University</a>.</p>
+        <div class="college">
+          <div class="layer">
+          </div>
+          <a href="https://www.cornell.edu/" target="_blank"><img class="college-logo" src="images/cornell_logo.png" width="150" height="150"/></a>
+        </div>
+        <div class="education-years">
+          <p class="year">Class of 2022</p></li>
+        </div>
+      </div>
+
+      <div class="school">
+        <p class="high-school-intro">I graduated from <a href="https://whs.wayland.k12.ma.us/" target="_blank">Wayland High School</a>.</p>
+        <div class="high-school">
+          <div class="layer">
+          </div>
+          <a href="https://whs.wayland.k12.ma.us/" target="_blank"><img class="high-school-logo" src="images/whs_logo.png" width="150" height="150"/></a>
+        </div>
+        <div class="education-years">
+          <p class="year">Class of 2018</p></li>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </div>
+
+  <div id="experience">
+    <div class="experience">
+      <div class="header">Experience</div>
+    </div>
+
+  <div id="work">
+    <h1 class="header">Work Experience</h1>
+    <div class="child">
+      <h2 class="organization">Cornell Engineering Registrar</h2>
+      <h2 class="position">Student Administrator</h2>
+      <h2 class="place">Ithaca, NY</h2>
+      <h2 class="time">February 2020-Present</h2>
+    </div>
+    <div class="child1">
+      <h2 class="description">This is my current on-campus job. I assist with paperwork regarding Engineering students adding/dropping classes, petitioning credits, room reservations or changes,
+        and any concerns they may have. I am also responsible for answering phone calls from students and faculty.</h2>
+    </div>
+
+    <div class="child">
+      <h2 class="organization">Girls Who Code (GWC)</h2>
+      <h2 class="position">Volunteer</h2>
+      <h2 class="place">Ithaca, NY</h2>
+      <h2 class="time">September 2019-December 2019</h2>
+    </div>
+    <div class="child1">
+      <h2 class="description">I assisted high school students enrolled in GWC classes with JavaScript projects from Khan Academy.
+        I gave weekly presentations on coding fundamentals in JavaScript and debugged student projects.</h2>
+    </div>
+
+    <div class="child">
+      <h2 class="organization">iD Tech Camps</h2>
+      <h2 class="position">AI & Machine Learning Instructor</h2>
+      <h2 class="place">Boston, MA</h2>
+      <h2 class="time">June 2019-August 2019</h2>
+    </div>
+    <div class="child1">
+      <h2 class="description">I taught advanced courses with AI and Machine Learning in Python on Ubuntu to students ages 13-17 at Harvard University, Bentley University, and St. Mark’s School.
+        We imported various datasets to TensorFlow to create neural networks in Jupyter Notebook.
+        As well, I taught Roblox and Imaginative Game Design to students ages 9-12 and Scratch to students ages 7-9.
+        I enjoyed preparing each student to create course-specific final projects to present at weekly family showcase.</h2>
+    </div>
+
+    <div class="child">
+      <h2 class="organization">Alzheimer’s Association</h2>
+      <h2 class="position">Special Events: Walk to End Alzheimer’s Intern</h2>
+      <h2 class="place">Waltham, MA</h2>
+      <h2 class="time">May 2017-August 2017</h2>
+    </div>
+    <div class="child1">
+      <h2 class="description">I planned the largest annual fundraising and public awareness event in Greater Boston and raised over $1.3 million for non-profit organization.
+        I cultivated relationships with local institutions and regional companies to gain corporate sponsorships and wrote macros in Excel VBA to streamline outreach to past and new walkers using the mailing list.</h2>
+    </div>
+
+    <div class="child">
+      <h2 class="organization">PANDORA Jewelry, LLC</h2>
+      <h2 class="position">Sales Associate</h2>
+      <h2 class="place">Natick, MA</h2>
+      <h2 class="time">December 2018-January 2019</h2>
+    </div>
+    <div class="child1">
+      <h2 class="description">I exceeded company sales goals by utilizing sales techniques and communicating product knowledge to the customer.
+        I recommended merchandise selections or helps to locate or obtain merchandise based on customer needs and desires.
+        I performed register transactions, such as ringing purchases, exchanges/returns, and processing cash or credit payments.</h2>
+    </div>
+
+    <div class="child">
+      <h2 class="organization">Newton Chinese Language School</h2>
+      <h2 class="position">Teacher Assistant</h2>
+      <h2 class="place">Newton, MA</h2>
+      <h2 class="time">January 2015-June 2015</h2>
+    </div>
+    <div class="child1">
+      <h2 class="description">I taught Chinese language (listening, reading, writing, and speaking) and culture to children in grades 2 through 4.</h2>
+    </div>
+
+    <div class="child">
+      <h2 class="organization">Sunrise of Wayland</h2>
+      <h2 class="position">Head Volunteer</h2>
+      <h2 class="place">Wayland, MA</h2>
+      <h2 class="time">September 2014-May 2018</h2>
+    </div>
+    <div class="child1">
+      <h2 class="description">I consistently volunteered at local senior home for at least seven hours per week, totaling over 1000 community service hours.
+        I organized and coordinated daily activities, planned social events, served meals and snacks, and specialized in interacting one-on-one with elders who have dementia and Alzheimer’s disease.</h2>
+    </div>
+
+  </div>
+
+  <div id="projects">
+    <h1 class="header">Projects</h1>
+    <div class="child">
+      <h2 class="organization">Engineers Without Borders - Project Team</h2>
+      <h2 class="position">Business and Design Subteam Member</h2>
+      <h2 class="place">Ithaca, NY</h2>
+      <h2 class="time">October 2018-Present</h2>
+      <a href="https://ewb.engineering.cornell.edu/" target="_blank"><img src="images/ewb_logo.png" class="EWB"></a>
+    </div>
+
+    <div class="child">
+      <h2 class="organization">Hackathon at Cornell</h2>
+      <h2 class="position">Team Lead, Laundry Day App</h2>
+      <h2 class="place">Ithaca, NY</h2>
+      <h2 class="time">November 2018-December 2018</h2>
+      <a href="https://github.com/daisyshu/LaundryDay" target="_blank"><img src="images/cornell_logo.png" class="LD"></a>
+    </div>
+
+    <div class="child1">
+      <h2 class="description">I worked on redesigning the team website using Fetch, created team poster, updated news on social media platforms, and designed team apparel
+        I attended technical workshops on LaTeX, Microsoft Azure, GitHub, and Neural Network.
+        I helped my team crowdfund over $15,000 for members to travel to Sunuka, Tanzania to implement and design a new water irrigation system that will provide instant access to water and
+        increase agriculture, i.e. crop yield, within the community.</h2>
+    </div>
+
+    <div class="child1">
+      <h2 class="description">I headed a team of four: two front-end developers (including myself), a back-end developer, and a UI designer to create an iOS app in Swift dedicated to simplify the college dorm laundry process.
+        Laundry Day aims to keep track of other students’ finished laundry loads, broken machines, contains a “to-wash” list and a convenient machine timer, so students will never forget to take out their laundry.</h2>
+    </div>
+
+    <h2 class ="github">Check out my <a href="https://github.com/daisyshu" target="_blank">GitHub</a> for more!</h2>
+
+  </div>
+
+  <div id="leadership">
+    <h1 class="header">Leadership</h1>
+    <div class="college-ecs">
+
+      <div class="ecs">
+        <a href="https://swe.cornell.edu/" target="_blank"><img src="images/swe_logo.png"></a>
+        <div class="caption">
+          <h2>Society of Women Engineers (SWE)</h2>
+          <p>Faculty Relations Officer</p>
+        </div>
+        <div class="accordion">Read More</div>
+        <div class="panel">
+          <p>I planned two large-scale events for students to meet and network with professors and staff. I also created invitations, contacted and communicated
+            among Engineering faculty and student leaders, and ordered meal service.</p>
+        </div>
+      </div>
+
+      <div class="ecs">
+        <a href="https://www.classcouncil.cornell.edu/" target="_blank"><img src="images/cc_logo.png"></a>
+        <div class="caption">
+          <h2>Cornell University Class Councils</h2>
+          <p>Class of 2022 Representative</p>
+        </div>
+        <div class="accordion">Read More</div>
+        <div class="panel">
+          <p>I helped plan and organize events that foster unity for the Class of 2022 class that enriches student experience,
+            such as the Pink Gala, Pups n’ Prelims, Convocation, Senior Days and many other philanthropy and fundraising events.</p>
+        </div>
+      </div>
+
+      <div class="ecs">
+        <a href="http://cornell.kappadelta.org/" target="_blank"><img src="images/kd_logo.png" class="KD"></a>
+        <div class="caption">
+          <h2>Kappa Delta Sorority</h2>
+          <p>Events Chair</p>
+        </div>
+        <div class="accordion">Read More</div>
+        <div class="panel">
+          <p>I was responsible for managing a $12,000 budget for an all-women’s philanthropy organization and coordinates multiple
+            organizational outing venues and transportation logistics for over 200 persons.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function(event) { 
+
+    var acc = document.getElementsByClassName("accordion");
+    var panel = document.getElementsByClassName("panel");
+
+    for (var i = 0; i < acc.length; i++) {
+        acc[i].onclick = function() {
+            var setClasses = !this.classList.contains("active");
+            setClass(acc, "active", "remove");
+            setClass(panel, "show", "remove");
+
+            if (setClasses) {
+                this.classList.toggle("active");
+                this.nextElementSibling.classList.toggle("show");
+            }
+        }
+    }
+
+    function setClass(els, className, fnName) {
+        for (var i = 0; i < els.length; i++) {
+            els[i].classList[fnName](className);
+        }
+    }
+
+    });
+      
+  	</script>
+  </div>
+
+  <div id="skills">
+    <h1 class="header">Skills</h1>
+    <div class="container">
+      <ul class="skills1">
+      <div class="background">
+        <li>HTML5</li><li class="flower">&#10048;&#10048;&#10048;&#10048;&#10048;</li>
+      </div>
+      <div class="background">
+        <li class="css">CSS</li><li class="flower">&#10048;&#10048;&#10048;&#10048;&#10048;</li>
+      </div>
+      <div class="background">
+        <li class="python">Python</li><li class="flower">&#10048;&#10048;&#10048;&#10048;&#10048;</li>
+      </div>
+      <div class="background">
+        <li class="java">Java</li><li class="flower">&#10048;&#10048;&#10048;&#10048;&#10048;</li>
+      </div>
+      <div class="background">
+        <li class="ocaml">OCaml</li><li class="flower">&#10048;&#10048;&#10048;&#10048;&#10048;</li>
+      </div>
+      </ul>
+      <ul class="skills2">
+      <div class="background">
+        <li class="swift">Swift</li><li class="flower">&#10048;&#10048;&#10048;&#10048;</li>
+      </div>
+        <div class="background">
+        <li>JavaScript</li><li class="flower">&#10048;&#10048;&#10048;&#10048;</li>
+      </div>
+        <div class="background">
+        <li class="sql">SQL</li><li class="flower">&#10048;&#10048;&#10048;</li>
+      </div>
+        <div class="background">
+        <li class="r">R</li><li class="flower">&#10048;&#10048;&#10048;</li>
+      </div>
+      </ul>
+    </div>
+  </div>
+
+  </div>
+
+
+  <div id="contact-me">
+    <h1>Contact Me</h1>
+    <div class="contact-icons">
+      <ul class="icons">
+        <li><a href="https://www.facebook.com/dshu5" target="_blank"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="https://www.instagram.com/dshu5/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+        <li><a href="mailto: dds86@cornell.edu" target="_blank"><i class="fa fa-envelope"></i></a></li>
+        <li><a href="https://github.com/daisyshu" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/daisyshu/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+      </ul>
+    </div>
+
+    <form method "POST" action="websiteform.php">
+      <div class="contact-form">
+
+        <div class="name">
+          <input type="text" name="" placeholder="Your Name">
+        </div>
+
+        <div class="email">
+        <input type="text" name="" placeholder="Your Email">
+        </div>
+
+        <div class="subject">
+          <input type="text" name="" placeholder="Subject">
+        </div>
+
+        <div class="msg">
+          <textarea class="area" placeholder="Write a Message"></textarea>
+        </div>
+
+        <div class="submit">
+          <button class="btn"><a href="mailto:dds86@cornell.com"><span>Send Message</span></a></button>
+        </div>
+      </div>
+    </form>
+
+  </div>
+
+
+  <div id="thanks">
+    <h1>Thank you for visiting!</h1>
+    <h2><a href="#welcome" target="_parent">&lt; Back to Top ></a></h2>
+    <h3>&#169; 2020 Daisy Shu</h3>
+  </div>
+
+
+</body>
+</html>

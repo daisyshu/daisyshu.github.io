@@ -3,7 +3,7 @@
 <head>
 <title>Daisy Shu</title>
 <link rel="stylesheet" type="text/css" href="index.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Yeseva One|Noto Sans JP|Inria Serif|Sigmar One|Special Elite|Chonburi|Oleo Script Swash Caps|Lily Script One|Katibeh|Raleway|Elsie Swash Caps|Jomolhari|Century Gothic|Franklin Gothic|Futura|Didot|Croissant One|Frank Ruhl Libre|B612|Crimson|Playfair Display|Spectral|Cormorant|Varela|Rouge Script|Lobster|Abril Fatface|Lato|Old Standard TT">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Yeseva One|Special Elite|Oleo Script Swash Caps|Lily Script One|Katibeh|Raleway|Jomolhari|Didot|Frank Ruhl Libre|Playfair Display|Spectral|Abril Fatface|Old Standard TT">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css"/>
 <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.css"/>
@@ -138,29 +138,28 @@
     </div>
   </div>
 
-
-<script type = "text/javascript">
-$(document).ready(function(){
-  //Take your div into one js variable
-  var div = $("#hide");
-  //Take the current position (vertical position from top) of your div in the variable
-  var pos = div.position();
-  //Now when scroll event trigger do following
-  $(window).scroll(function () {
-   var windowpos = $(window).scrollTop();
-   //Now if you scroll more than 100 pixels vertically change the class to AfterScroll
-   // I am taking 100px scroll, you can take whatever you need
-   if (windowpos >= (pos.top - 100)) {
-     div.addClass("AfterScroll");
-   }
-   //If scroll is less than 100px, remove the class AfterScroll so that your content will be hidden again
-   else {
-     s.removeClass("AfterScroll");
-   }
-   //Note: If you want the content should be shown always once you scroll and do not want to hide it again when go to top agian, no need to write the else part
- });
-});
-</script>
+  <script type = "text/javascript">
+  $(document).ready(function(){
+    //Take your div into one js variable
+    var div = $("#hide");
+    //Take the current position (vertical position from top) of your div in the variable
+    var pos = div.position();
+    //Now when scroll event trigger do following
+    $(window).scroll(function () {
+    var windowpos = $(window).scrollTop();
+    //Now if you scroll more than 100 pixels vertically change the class to AfterScroll
+    // I am taking 100px scroll, you can take whatever you need
+    if (windowpos >= (pos.top - 100)) {
+      div.addClass("AfterScroll");
+    }
+    //If scroll is less than 100px, remove the class AfterScroll so that your content will be hidden again
+    else {
+      s.removeClass("AfterScroll");
+    }
+    //Note: If you want the content should be shown always once you scroll and do not want to hide it again when go to top agian, no need to write the else part
+  });
+  });
+  </script>
 
 
   <div id="education">
@@ -332,7 +331,7 @@ $(document).ready(function(){
     <div class="college-ecs">
 
       <div class="ecs">
-        <a href="https://swe.cornell.edu/" target="_blank"><img src="images/swe_logo.png"></a>
+        <a href="https://swe.cornell.edu/" target="_blank"><img src="images/swe_logo.png" width="230px" height="240px"></a>
         <div class="caption">
           <h2>Society of Women Engineers (SWE)</h2>
           <p>Faculty Relations Officer</p>
@@ -345,7 +344,7 @@ $(document).ready(function(){
       </div>
 
       <div class="ecs">
-        <a href="https://www.classcouncil.cornell.edu/" target="_blank"><img src="images/cc_logo.png"></a>
+        <a href="https://www.classcouncil.cornell.edu/" target="_blank"><img src="images/cc_logo.png" width="230px" height="240px"></a>
         <div class="caption">
           <h2>Cornell University Class Councils</h2>
           <p>Class of 2022 Representative</p>
@@ -358,7 +357,7 @@ $(document).ready(function(){
       </div>
 
       <div class="ecs">
-        <a href="http://cornell.kappadelta.org/" target="_blank"><img src="images/kd_logo.png" class="KD"></a>
+        <a href="http://cornell.kappadelta.org/" target="_blank"><img src="images/kd_logo.png" class="KD" width="190px" height="240px"></a>
         <div class="caption">
           <h2>Kappa Delta Sorority</h2>
           <p>Events Chair</p>

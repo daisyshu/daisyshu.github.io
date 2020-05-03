@@ -5,36 +5,6 @@ body {
   overflow-x: hidden;
 }
 
-/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
-/* Portrait and Landscape */
-@media screen and (max-width: 667px) {
-  #welcome {
-    width: 80%;
-    margin-left: 3%;
-    margin-right: 3%;
-  }
-
-}
-
-/* Portrait */
-/* @media only screen
-  and (min-device-width: 375px)
-  and (max-device-width: 667px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) {
-
-} */
-
-/* Landscape */
-/* @media only screen 
-  and (min-device-width: 375px)
-  and (max-device-width: 667px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: landscape) {
-
-} */
-
-
 #header {
   width: 100%;
   background-color: white;
@@ -42,7 +12,6 @@ body {
   position: fixed;
   white-space: nowrap;
   z-index: 20;
-  min-width: 920px;
 }
 
 #nav {
@@ -61,10 +30,11 @@ body {
   margin-top: 10px;
   margin-left: 90px;
   font-family: 'Lily Script One', sans-serif;
+  padding-right: 25px;
 }
 #nav a {
   color: #E64398;
-  opacity: 0.6;
+  opacity: 1;
   font-size: 25px;
   font-family: 'Katibeh', sans-serif;
   text-decoration: none;
@@ -91,17 +61,16 @@ body {
 }
 #nav a:hover {
   color: #E64398;
-  opacity: 1;
+  opacity: 0.7;
 }
 #nav a.active {
   color: #E64398;
-  opacity: 1;
+  opacity: 0.7;
   border-bottom: 2px solid #E64398;
 }
 #nav a:visited {
   text-decoration: none;
 }
-
 #nav button.dropbtn {
   text-decoration: none;
   position: relative;
@@ -115,17 +84,16 @@ body {
 }
 #nav button.dropbtn a {
   color: #E64398;
-  /* opacity: 0.6; */
   font-size: 25px;
   font-family: 'Katibeh', sans-serif;
 }
 #nav button.dropbtn a:hover {
   color: #E64398;
-  opacity: 1;
+  opacity: 0.7;
 }
 #nav button.dropbtn a.active {
   color: #E64398;
-  opacity: 1;
+  opacity: 0.7;
 }
 #nav div.dropdown {
   position: relative;
@@ -153,14 +121,14 @@ body {
   background-color: transparent;
   text-decoration: none;
   color: #E64398;
-  opacity: 1;
+  opacity: 0.7;
 }
 #nav div.dropdown:hover div.dropdown-content {
   display: block;
 }
 #nav div.dropdown:hover > button.dropbtn a {
   color: #E64398;
-  opacity: 1;
+  opacity: 0.7;
 }
 #nav div.dropdown-content a:hover::before {
   visibility: hidden;
@@ -194,7 +162,6 @@ body {
 }
 #welcome .title .letter {
   display: inline-block;
-  line-height: 1em;
 }
 #welcome a {
   position: absolute;
@@ -202,7 +169,7 @@ body {
   left: 47%;
   letter-spacing: .1em;
   text-decoration: none;
-  transition: .3s ease;
+  transition: 0.3s ease;
   font: 20px 'Oleo Script Swash Caps', sans-serif;
   color: black;
 }
@@ -223,7 +190,7 @@ body {
   left: 50%;
 }
 #welcome a:hover {
-  opacity: .6;
+  opacity: 0.6;
 }
 @-webkit-keyframes scroll {
   0% {
@@ -264,7 +231,7 @@ body {
   font-family: 'Playfair Display', sans-serif;
   font-weight: bold;
   letter-spacing: 6px;
-  font-size: 3.57vw;
+  font-size: 52px;
   position: absolute;
   margin-left: 90px;
   margin-top: 10px;
@@ -317,7 +284,6 @@ body {
   font-size: 13px;
   text-align: center;
   margin: -10px auto;
-  /* margin-bottom: 40px; */
 }
 @keyframes type {
   0% {
@@ -335,6 +301,9 @@ body {
     border-right-color: transparent;
   }
 }
+#intro div.second {
+  display: none;
+}
 
 
 #education {
@@ -342,13 +311,13 @@ body {
   background-color: white;
   height: auto;
   overflow: hidden;
-  padding: 110px 0;
+  padding: 120px 0;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 #education div.child {
-  width: 1200px;
+  width: 1070px;
   height: 100%;
   background-color: #F8E5E5;
 }
@@ -359,8 +328,8 @@ body {
   font-size: 60px;
   letter-spacing: 8px;
   text-transform: uppercase;
-  margin-top: 80px;
-  margin-bottom: 50px;
+  margin-top: 50px;
+  margin-bottom: 30px;
 }
 #education div.education {
   text-align: center;
@@ -368,6 +337,7 @@ body {
 #education div.school {
   text-align: center;
   display: inline-block;
+  margin: 0px -20px;
 }
 #education p.college-intro, p.high-school-intro {
   font-family: 'Raleway', sans-serif;
@@ -491,13 +461,11 @@ body {
   background-image: url("images/pink.jpg");
   background-size: cover;
   position: relative;
-  /* if don't like on mobile, change height to 70vh */
   height: 35vw;
   margin-top: 50px;
   margin-bottom: 80px;
 }
 #experience div.experience div.header {
-  font-size: 6.2vw;
   font-family: 'Didot', sans-serif;
   font-weight: bold;
   text-transform: uppercase;
@@ -508,11 +476,12 @@ body {
   padding: 10px;
   text-align: center;
   position: absolute;
-  width: 57.5%;
+  width: 56%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   mix-blend-mode: screen;
+  font-size: 7vw;
 }
 #experience h1 {
   text-align: center;
@@ -535,7 +504,7 @@ body {
   max-width: 1800px;
 }
 #work div.child {
-  width: 600px;
+  width: 560px;
   height: 350px;
   background-color: #F8E5E5;
   display: inline-block;
@@ -544,7 +513,7 @@ body {
   line-height: 30px;
 }
 #work div.child1 {
-  width: 600px;
+  width: 560px;
   height: 350px;
   background-color: rgb(251, 241, 241);
   display: inline-block;
@@ -557,7 +526,7 @@ body {
   font-family: 'Didot', sans-serif;
   font-weight: bold;
   font-size: 24px;
-  margin-top: 70px;
+  margin-top: 80px;
 }
 #work div.child h2.position {
   text-align: center;
@@ -579,6 +548,7 @@ body {
   font-family: 'Old Standard TT', sans-serif;
   font-size: 20px;
   padding: 25px 35px;
+  vertical-align: middle;
 }
 
 
@@ -588,26 +558,23 @@ body {
   height: auto;
   overflow: hidden;
   padding: 80px 0;
+  max-width: 1680px;
+  text-align: center;
+}
+#projects div.block {
   display: inline-block;
   text-align: center;
-  max-width: 1680px;
+  vertical-align: middle;
 }
 #projects div.child {
   width: 560px;
-  height: 388px;
-  background-color: rgb(249, 243, 255);
-  display: inline-block;
-  margin-top: 5px;
-  vertical-align: middle;
+  height: 360px;
+  background-color: rgba(205, 123, 230, 0.137);
   line-height: 30px;
 }
 #projects div.child1 {
   width: 560px;
-  height: 320px;
-  background-color: rgba(249, 243, 255, 0.7);
-  display: inline-block;
-  margin-top: 5px;
-  vertical-align: middle;
+  background-color: rgba(218, 162, 235, 0.137);
   line-height: 30px;
 }
 #projects div.child img.EWB {
@@ -629,8 +596,10 @@ body {
   font-family: 'Didot', sans-serif;
   font-weight: bold;
   font-size: 24px;
-  margin-top: 60px;
   vertical-align: middle;
+  padding-top: 35px;
+  margin: 0px;
+  margin-top: 5px;
 }
 #projects div.child h2.position {
   text-align: center;
@@ -651,16 +620,26 @@ body {
   text-align: justify;
   font-family: 'Old Standard TT', sans-serif;
   font-size: 16px;
-  padding: 30px 35px;
+  padding: 35px 35px;
+  height: 240px;
+  vertical-align: middle;
+  margin: 0px;
+  margin-top: 5px;
+}
+#projects div.child2 {
+  display: inline-block;
+  text-align: center;
+  background-color: rgba(249, 243, 255, 0.4);
+  width: 1064px;
+  height: 30px;
+  padding: 30px;
+  margin-top: 5px;
 }
 #projects h2.github {
   text-align: center;
-  background-color: rgba(249, 243, 255, 0.4);
-  margin-top: 5px;
-  margin-right: 278px;
-  margin-left: 278px;
-  padding: 30px;
   font-family: 'Playfair Display', sans-serif;
+  margin: 0px;
+  margin-top: -3px;
 }
 #projects h2 a {
   color: rgb(125, 61, 180);
@@ -673,27 +652,23 @@ body {
 }
 
 
-#skills {
-  width: 100%;
-  background: white;
-  height: auto;
-  overflow: hidden;
-  padding: 120px 0;
-}
 #leadership {
   width: 100%;
   background: white;
   height: auto;
   overflow: hidden;
-  padding: 50px 0;
+  padding: 90px 0;
+}
+#leadership h1.header {
+  margin-bottom: 20px;
 }
 #leadership div.college-ecs {
   display: block;
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
 }
 #leadership div.college-ecs > div {
-  margin: 30px;
+  margin: 25px 25px;
 }
 #leadership div.ecs {
   display: inline-block;
@@ -819,7 +794,8 @@ body {
   width: 100%;
   height: auto;
   overflow: hidden;
-  padding: 80px 0;
+  padding: 90px 0;
+  margin-bottom: -100px;
 }
 #skills div.container {
   text-align: center;
@@ -828,16 +804,20 @@ body {
   display: inline-block;
   list-style-type: none;
   text-align: left;
+  margin: 0px;
+  margin-left: -30px;
 }
 #skills ul.skills2 {
   display: inline-block;
   vertical-align: top;
   list-style-type: none;
   text-align: left;
+  margin: 0px;
+  margin-left: -30px;
 }
 #skills div.background {
   height: 40px;
-  width: 200px;
+  width: 214px;
   padding: 30px;
 }
 #skills ul.skills1 li, ul.skills2 li {
@@ -846,17 +826,20 @@ body {
   font-size: 20px;
   padding-right: 20px;
 }
+#skills ul.skills1 li.html5 {
+  margin-right: 18px;
+}
 #skills ul.skills1 li.css {
-  margin-right: 36px;
+  margin-right: 54px;
 }
 #skills ul.skills1 li.python {
-  margin-right: 8px;
+  margin-right: 26px;
 }
 #skills ul.skills1 li.java {
-  margin-right: 36px;
+  margin-right: 54px;
 }
 #skills ul.skills1 li.ocaml {
-  margin-right: 8px;
+  margin-right: 26px;
 }
 #skills ul.skills2 li.swift {
   margin-right: 44px;
@@ -869,16 +852,16 @@ body {
 }
 #skills div.background li.flower {
   display: inline-block;
-  color: #CC00CC;
+  color: #E64398;
 }
 
 
 #contact-me {
   width: 100%;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(230, 230, 250, 1) 100%);
+  background: linear-gradient(to bottom, white 0%, rgb(243, 230, 242) 100%);
   height: auto;
   overflow: hidden;
-  padding: 80px 0;
+  padding: 90px 0;
 }
 #contact-me h1 {
   font-family: 'Didot', sans-serif;
@@ -887,10 +870,8 @@ body {
   letter-spacing: 8px;
   text-transform: uppercase;
   text-align: center;
-  margin-top: 50px;
   margin-bottom: 20px;
   color: black;
-  min-width: 638px;
 }
 #contact-me contact-icons {
   display: inline-block;
@@ -901,7 +882,6 @@ body {
   margin-top: -10px;
   align-items: center;
   justify-content: center;
-  min-width: 630px;
 }
 #contact-me ul.icons li {
   float: left;
@@ -923,7 +903,7 @@ body {
   height: 60px;
   border-radius: 100%;
   display: block;
-  background: linear-gradient(45deg, #CC00CC, rgba(204, 0, 204, 0.459));
+  background: linear-gradient(45deg, #E64398, rgba(204, 0, 204, 0.459));
   margin: auto;
 }
 #contact-me ul.icons a:hover:before {
@@ -932,20 +912,20 @@ body {
 }
 #contact-me ul.icons a:hover i {
   transform: scale(2.2);
-  color: #FF66FF;
-  background: linear-gradient(45deg, #CC00CC, rgba(204, 0, 204, 0.459));
+  color: #E64398;
+  background: linear-gradient(45deg, #E64398, rgba(204, 0, 204, 0.459));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 0.5s ease-in;
 }
 #contact-me div.contact-form {
   max-width: 800px;
-  height: 450px;
+  width: 127.6vw;
+  height: 53vh;
   background: #fff;
   margin: 40px auto;
   box-sizing: border-box;
   padding: 40px;
-  min-width: 638px;
 }
 #contact-me div.contact-form input, textarea {
   width: 100%;
@@ -972,18 +952,18 @@ body {
   margin-right: 0;
 }
 #contact-me div.msg textarea {
-  height: 200px;
+  height: 23.56vh;
   resize: none;
 }
 #contact-me div.contact-form input:focus, div.msg textarea:focus {
-  border: 2px solid rgba(204, 0, 204, 0.459);
+  border: 2px solid rgba(230, 67, 151, 0.699);
 }
 #contact-me div.contact-form ::placeholder {
   font-family: 'Raleway', sans-serif;
 }
 #contact-me div.submit button.btn {
   width: 190px;
-  background-color: #CC00CC;
+  background-color: #E64398;
   font-size: 19px;
   padding: 12px;
   transition: all 0.5s;
@@ -1016,10 +996,22 @@ body {
   opacity: 1;
   right: 0;
 }
+#contact-me #map {
+  display: none;
+}
+#contact-me .geocoder {
+  display: none;
+}
+#contact-me #marker {
+  display: none;
+}
+#contact-me .mapboxgl-popup {
+  display: none;
+}
 
 
 #thanks {
-  background: linear-gradient(to bottom, rgba(230, 230, 250, 1) 0%, #F8E5E5 100%);
+  background: linear-gradient(to bottom, rgb(243, 230, 242) 0%, white 100%);
   width: 100%;
   height: auto;
   overflow: hidden;
@@ -1038,6 +1030,7 @@ body {
   font-family: 'Frank Ruhl Libre', sans-serif;
   font-size: 70px;
   letter-spacing: 8px;
+  padding: 0px 30px;
 }
 #thanks h2 {
   text-align: center;
@@ -1058,6 +1051,464 @@ body {
   font-size: 20px;
   text-align: center;
   margin-top: 300px;
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1250px) {
+  #welcome a {
+    left: 45%;
+  }
+  #experience div.experience {
+    height: 500px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  #experience div.experience div.header {
+    font-size: 8.5vw;
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1123px) {
+  #projects div.child2 {
+    width: 500px;
+  }
+}
+
+@media screen and (min-width: 667px) and (max-width: 1000px) {
+  #logo a {
+    margin-left: 30px;
+  }
+  #welcome {
+    overflow-wrap: normal;
+  }
+  #welcome h1.title {
+    white-space: normal;
+  }
+  #welcome .title .letter {
+    display: unset;
+  }
+  #welcome a {
+    left: 44%;
+  }
+  
+  #intro h2.resume {
+    margin-bottom: 26px;
+  }
+  #intro h1.welcome {
+    margin: 0px;
+    position: relative;
+    text-align: center;
+  }
+  #intro .AfterScroll {
+    display: none;
+  }
+  #intro div.second {
+    display: unset;
+    margin-top: 20px;
+  }
+  #intro div.second h2.subtitle {
+    position: relative;
+    font-weight: bold;
+    font-family: 'Special Elite', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    margin: 25px;
+    margin-top: 20px;
+  }
+
+  #education div.child {
+    width: 600px;
+  }
+
+  #experience div.experience {
+    height: 600px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  #experience div.experience div.header {
+    font-size: 10vw;
+    width: 82%;
+  }
+
+  #projects div.child2 {
+    width: 500px;
+  }
+}
+
+@media screen and (min-width: 667px) and (max-width: 851px) {
+  #nav {
+    text-align: center;
+    margin: 0px auto;
+    margin-top: 30px;
+    float: left;
+  }
+  #nav div.dropdown-content a {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 667px) and (max-width: 731px) {
+  #header {
+    background-color: white;
+    height: 140px;
+  }
+  #logo a {
+    text-align: center;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-left: 34%;
+  }
+  #nav {
+    text-align: center;
+    margin-top: 20px;
+    float: left;
+    margin-left: 12%;
+  }
+  #nav div.dropdown-content a {
+    text-align: left;
+  }
+
+  #welcome a {
+    left: 42%;
+  }
+
+  #intro {
+    padding: 160px 0px;
+  }
+
+  #education {
+    padding: 150px 0px;
+  }
+
+  #experience {
+    padding: 160px 0px;
+  }
+
+  #work {
+    padding: 130px 0px;
+  }
+
+  #projects {
+    padding: 130px 0px;
+  }
+
+  #leadership {
+    padding: 110px 0px;
+  }
+  #leadership div.ecs img {
+    width: 190px;
+    height: 210px;
+  }
+  #leadership div.ecs img.KD {
+    width: 160px;
+  }
+
+  #skills {
+    padding: 130px 0px;
+  }
+
+  #contact-me {
+    padding: 120px 0px;
+  }
+  #contact-me ul {
+    margin-bottom: 40px;
+  }
+  #contact-me form {
+    display: none;
+  }
+  #contact-me .geocoder {
+    display: unset;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    top: 10px;
+  }
+  #contact-me .mapboxgl-ctrl-geocoder {
+    min-width: 60%;
+    left: 20%;
+  }
+  #contact-me #map {
+    display: block;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    height: 400px;
+    margin-top: 30px;
+    margin-bottom: 0px;
+  }
+  #contact-me #marker {
+    display: block;
+    background-image: url("images/marker.jpeg");
+    background-size: cover;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  #contact-me .mapboxgl-popup {
+    display: block;
+    max-width: 200px;
+  }
+
+  #thanks h3 {
+    margin-top: 250px;
+  }
+}
+
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+/* Portrait and Landscape */
+@media screen and (min-width: 375px) and (max-width: 667px) {
+  #header {
+    background-color: white;
+    height: 140px;
+  }
+  #logo a {
+    text-align: center;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-left: 30%;
+  }
+  #nav div.dropdown-content a {
+    text-align: left;
+  }
+  #nav {
+    text-align: center;
+    margin-top: 20px;
+    float: left;
+  }
+
+  #welcome {
+    overflow-wrap: normal;
+  }
+  #welcome h1.title {
+    font-size: 90px;
+    overflow-wrap: normal;
+    white-space: normal;
+    margin-top: 90px;
+  }
+  #welcome .title .letter {
+    display: unset;
+  }
+  #welcome a {
+    left: 39%;
+  }
+
+  #intro {
+    padding: 160px 0px;
+  }
+  #intro h2.resume {
+    margin-bottom: 26px;
+  }
+  #intro h1.welcome {
+    margin: 0px;
+    position: relative;
+    text-align: center;
+  }
+  #intro img.profile-pic {
+    width: 290px;
+    height: 430px;
+  }
+  #intro .AfterScroll {
+    display: none;
+  }
+  #intro div.second {
+    display: unset;
+    margin-top: 20px;
+  }
+  #intro div.second h2.subtitle {
+    position: relative;
+    font-weight: bold;
+    font-family: 'Special Elite', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    margin: 25px;
+    margin-top: 20px;
+    margin-bottom: -60px;
+  }
+
+  #education {
+    padding: 150px 0px;
+  }
+  #education div.child {
+    width: 600px;
+    margin-bottom: -30px;
+  }
+  #education div.child h1 {
+    font-size: 52px;
+  }
+
+  #experience {
+    padding: 190px 0px;
+  }
+  #experience div.experience {
+    height: 550px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  #experience div.experience div.header {
+    font-size: 10vw;
+    width: 86%;
+  }
+  #experience h1 {
+    font-size: 52px;
+  }
+
+  #work {
+    padding: 130px 0px;
+    margin-bottom: -30px;
+  }
+  #work div.child {
+    width: 420px;
+    height: 330px;
+  }
+  #work div.child1 {
+    width: 420px;
+    height: 470px;
+  }
+  #work #registrar {
+    height: 340px;
+  }
+  #work #gwc {
+    height: 280px;
+  }
+  #work #alzheimer {
+    height: 370px;
+  }
+  #work #pandora {
+    height: 390px;
+  }
+  #work #newton {
+    height: 230px;
+  }
+  #work #sunrise {
+    height: 330px;
+  }
+  #work div.child h2.organization {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  #work div.child h2.position {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  #work div.child1 h2.position {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  #projects {
+    padding: 130px 0px;
+  }
+  #projects div.child {
+    width: 420px;
+    height: 420px;
+  }
+  #projects div.child1 {
+    width: 420px;
+    height: 400px;
+  }
+  #projects div.child2 {
+    width: 360px;
+  }
+  #projects div.block #second {
+    height: 370px;
+  }
+  #projects div.child h2.organization {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  #projects div.child h2.position {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  #leadership {
+    margin-bottom: -40px;
+    padding: 130px 0px;
+  }
+  #leadership div.ecs img {
+    width: 190px;
+    height: 210px;
+  }
+  #leadership div.ecs img.KD {
+    width: 160px;
+  }
+  #leadership div.caption h2 {
+    font-size: 24px;
+    padding-top: 5px;
+  }
+  #leadership div.caption p {
+    font-size: 18px;
+    padding-top: 5px;
+  }
+
+  #skills {
+    padding: 130px 0px;
+  }
+
+  #contact-me {
+    padding: 140px 0px;
+  }
+  #contact-me h1 {
+    font-size: 52px;
+  }
+  #contact-me ul {
+    margin-bottom: 40px;
+  }
+  #contact-me form {
+    display: none;
+  }
+  #contact-me .geocoder {
+    display: unset;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    top: 10px;
+  }
+  #contact-me .mapboxgl-ctrl-geocoder {
+    width: 60%;
+    left: 19.5%;
+  }
+  #contact-me #map {
+    display: block;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    height: 400px;
+    margin-top: 30px;
+    margin-bottom: 0px;
+  }
+  #contact-me #marker {
+    display: block;
+    background-image: url("images/marker.jpeg");
+    background-size: cover;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  #contact-me .mapboxgl-popup {
+    display: block;
+    max-width: 200px;
+  }
+
+  #thanks h1 {
+    font-size: 52px;
+  }
+  #thanks h2 a {
+    font-size: 26px;
+  }
+  #thanks h3 {
+    font-size: 18px;
+    margin-top: 250px;
+  }
 }
 
 /* * {

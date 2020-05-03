@@ -4,14 +4,16 @@
 <title>Daisy Shu</title>
 <link rel="stylesheet" type="text/css" href="index.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<link href="https://fonts.googleapis.com/css?family=Yeseva One|Noto Sans JP|Inria Serif|Sigmar One|Special Elite|Chonburi|Oleo Script Swash Caps
+<link href="//fonts.googleapis.com/css?family=Yeseva One|Noto Sans JP|Inria Serif|Sigmar One|Special Elite|Chonburi|Oleo Script Swash Caps
 |Lily Script One|Katibeh|Raleway|Elsie Swash Caps|Jomolhari|Century Gothic|Franklin Gothic|Futura|Didot|Croissant One|Frank Ruhl Libre
 |B612|Crimson|Playfair Display|Spectral|Cormorant|Varela|Rouge Script|Lobster|Abril Fatface|Lato|Old Standard TT" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-<meta name="HandheldFriendly" content="true"> -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="HandheldFriendly" content="true">
+<script src="https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.js"></script>
+<link href="https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.css" rel="stylesheet"/>
 </head>
 
 <body>
@@ -94,8 +96,6 @@
 
       }
         </script>
-
-      </div>
   </header>
 
 
@@ -129,12 +129,15 @@
 
   <div id="intro">
     <h1 class="welcome">Welcome!</h1>
-      <img class="profile-pic" src="images/profile_pic.jpg"/>
-      <h1 class="name">Daisy Shu</h1>
-      <h2 class="resume"><a href="file:///Users/daisyshu/Downloads/Resume.pdf" target="_blank">Here is my resume</a></h2>
-      <div id="hide" class="BeforeScroll">
+    <img class="profile-pic" src="images/profile_pic.jpg"/>
+    <h1 class="name">Daisy Shu</h1>
+    <h2 class="resume"><a href="file:///Users/daisyshu/Downloads/Resume.pdf" target="_blank">Here is my resume</a></h2>
+    <div id="hide" class="BeforeScroll">
       <h2 class="subtitle">Computer Science student, web developer, technology and business enthusiast.</h2>
-      </div>
+    </div>
+    <div class="second">
+      <h2 class="subtitle">Computer Science student, web developer, technology and business enthusiast.</h2>
+    </div>
   </div>
 
 
@@ -170,8 +173,7 @@ $(document).ready(function(){
       <div class="school">
         <p class="college-intro">I am a rising junior studying <a href="https://www.cs.cornell.edu/" target="_blank">Computer Science</a> in the <a href="https://www.engineering.cornell.edu/" target="_blank">College of Engineering</a> at <a href="https://www.cornell.edu/" target="_blank">Cornell University</a>.</p>
         <div class="college">
-          <div class="layer">
-          </div>
+          <div class="layer"></div>
           <a href="https://www.cornell.edu/" target="_blank"><img class="college-logo" src="images/cornell_logo.png" width="150" height="150"/></a>
         </div>
         <div class="education-years">
@@ -182,8 +184,7 @@ $(document).ready(function(){
       <div class="school">
         <p class="high-school-intro">I graduated from <a href="https://whs.wayland.k12.ma.us/" target="_blank">Wayland High School</a>.</p>
         <div class="high-school">
-          <div class="layer">
-          </div>
+          <div class="layer"></div>
           <a href="https://whs.wayland.k12.ma.us/" target="_blank"><img class="high-school-logo" src="images/whs_logo.png" width="150" height="150"/></a>
         </div>
         <div class="education-years">
@@ -208,7 +209,7 @@ $(document).ready(function(){
       <h2 class="place">Ithaca, NY</h2>
       <h2 class="time">February 2020-Present</h2>
     </div>
-    <div class="child1">
+    <div class="child1" id="registrar">
       <h2 class="description">This is my current on-campus job. I assist with paperwork regarding Engineering students adding/dropping classes, petitioning credits, room reservations or changes,
         and any concerns they may have. I am also responsible for answering phone calls from students and faculty.</h2>
     </div>
@@ -219,7 +220,7 @@ $(document).ready(function(){
       <h2 class="place">Ithaca, NY</h2>
       <h2 class="time">September 2019-December 2019</h2>
     </div>
-    <div class="child1">
+    <div class="child1" id="gwc">
       <h2 class="description">I assisted high school students enrolled in GWC classes with JavaScript projects from Khan Academy.
         I gave weekly presentations on coding fundamentals in JavaScript and debugged student projects.</h2>
     </div>
@@ -231,9 +232,10 @@ $(document).ready(function(){
       <h2 class="time">June 2019-August 2019</h2>
     </div>
     <div class="child1">
-      <h2 class="description">I taught advanced courses with AI and Machine Learning in Python on Ubuntu to students ages 13-17 at Harvard University, Bentley University, and St. Mark’s School.
-        We imported various datasets to TensorFlow to create neural networks in Jupyter Notebook.
-        As well, I taught Roblox and Imaginative Game Design to students ages 9-12 and Scratch to students ages 7-9.
+      <h2 class="description">I taught AI and Machine Learning courses in Python on Ubuntu to students ages 13-17 at Harvard University, 
+        Bentley University, and St. Mark’s School.
+        I imported various datasets to TensorFlow to create neural networks in Jupyter Notebook.
+        I also taught Roblox and Imaginative Game Design to students ages 9-12 and Scratch to students ages 7-9.
         I enjoyed preparing each student to create course-specific final projects to present at weekly family showcase.</h2>
     </div>
 
@@ -243,9 +245,11 @@ $(document).ready(function(){
       <h2 class="place">Waltham, MA</h2>
       <h2 class="time">May 2017-August 2017</h2>
     </div>
-    <div class="child1">
-      <h2 class="description">I planned the largest annual fundraising and public awareness event in Greater Boston and raised over $1.3 million for non-profit organization.
-        I cultivated relationships with local institutions and regional companies to gain corporate sponsorships and wrote macros in Excel VBA to streamline outreach to past and new walkers using the mailing list.</h2>
+    <div class="child1" id="alzheimer">
+      <h2 class="description">I planned the largest annual fundraising and public awareness event in Greater Boston and raised over $1.3 million
+        for non-profit organization.
+        I cultivated relationships with local institutions and regional companies to gain corporate sponsorships and wrote macros in Excel VBA
+        to streamline outreach to past and new walkers using the mailing list.</h2>
     </div>
 
     <div class="child">
@@ -254,7 +258,7 @@ $(document).ready(function(){
       <h2 class="place">Natick, MA</h2>
       <h2 class="time">December 2018-January 2019</h2>
     </div>
-    <div class="child1">
+    <div class="child1" id="pandora">
       <h2 class="description">I exceeded company sales goals by utilizing sales techniques and communicating product knowledge to the customer.
         I recommended merchandise selections or helps to locate or obtain merchandise based on customer needs and desires.
         I performed register transactions, such as ringing purchases, exchanges/returns, and processing cash or credit payments.</h2>
@@ -266,8 +270,9 @@ $(document).ready(function(){
       <h2 class="place">Newton, MA</h2>
       <h2 class="time">January 2015-June 2015</h2>
     </div>
-    <div class="child1">
-      <h2 class="description">I taught Chinese language (listening, reading, writing, and speaking) and culture to children in grades 2 through 4.</h2>
+    <div class="child1" id="newton">
+      <h2 class="description">I taught Chinese language (listening, reading, writing, and speaking) and culture to children in grades
+        2 through 4.</h2>
     </div>
 
     <div class="child">
@@ -276,7 +281,7 @@ $(document).ready(function(){
       <h2 class="place">Wayland, MA</h2>
       <h2 class="time">September 2014-May 2018</h2>
     </div>
-    <div class="child1">
+    <div class="child1" id="sunrise">
       <h2 class="description">I consistently volunteered at local senior home for at least seven hours per week, totaling over 1000 community service hours.
         I organized and coordinated daily activities, planned social events, served meals and snacks, and specialized in interacting one-on-one with elders who have dementia and Alzheimer’s disease.</h2>
     </div>
@@ -285,35 +290,42 @@ $(document).ready(function(){
 
   <div id="projects">
     <h1 class="header">Projects</h1>
-    <div class="child">
-      <h2 class="organization">Engineers Without Borders - Project Team</h2>
-      <h2 class="position">Business and Design Subteam Member</h2>
-      <h2 class="place">Ithaca, NY</h2>
-      <h2 class="time">October 2018-Present</h2>
-      <a href="https://ewb.engineering.cornell.edu/" target="_blank"><img src="images/ewb_logo.png" class="EWB"></a>
+
+    <div class="block">
+      <div class="child" id="first">
+        <h2 class="organization">Engineers Without Borders - Project Team</h2>
+        <h2 class="position">Business and Design Subteam Member</h2>
+        <h2 class="place">Ithaca, NY</h2>
+        <h2 class="time">October 2018-Present</h2>
+        <a href="https://ewb.engineering.cornell.edu/" target="_blank"><img src="images/ewb_logo.png" class="EWB"></a>
+      </div>
+
+      <div class="child1">
+        <h2 class="description">I worked on redesigning the team website using Fetch, created team poster, updated news on social media platforms, and designed team apparel
+          I attended technical workshops on LaTeX, Microsoft Azure, GitHub, and Neural Network.
+          I helped my team crowdfund over $15,000 for members to travel to Sunuka, Tanzania to implement and design a new water irrigation system that will provide instant access to water and
+          increase agriculture, i.e. crop yield, within the community.</h2>
+      </div>
     </div>
 
-    <div class="child">
-      <h2 class="organization">Hackathon at Cornell</h2>
-      <h2 class="position">Team Lead, Laundry Day App</h2>
-      <h2 class="place">Ithaca, NY</h2>
-      <h2 class="time">November 2018-December 2018</h2>
-      <a href="https://github.com/daisyshu/LaundryDay" target="_blank"><img src="images/cornell_logo.png" class="LD"></a>
+    <div class="block">
+      <div class="child" id="second">
+        <h2 class="organization">Hackathon at Cornell</h2>
+        <h2 class="position">Team Lead, Laundry Day App</h2>
+        <h2 class="place">Ithaca, NY</h2>
+        <h2 class="time">November 2018-December 2018</h2>
+        <a href="https://github.com/daisyshu/LaundryDay" target="_blank"><img src="images/cornell_logo.png" class="LD"></a>
+      </div>
+
+      <div class="child1">
+        <h2 class="description">I headed a team of four: two front-end developers (including myself), a back-end developer, and a UI designer to create an iOS app in Swift dedicated to simplify the college dorm laundry process.
+          Laundry Day aims to keep track of other students’ finished laundry loads, broken machines, contains a “to-wash” list and a convenient machine timer, so students will never forget to take out their laundry.</h2>
+      </div>
     </div>
 
-    <div class="child1">
-      <h2 class="description">I worked on redesigning the team website using Fetch, created team poster, updated news on social media platforms, and designed team apparel
-        I attended technical workshops on LaTeX, Microsoft Azure, GitHub, and Neural Network.
-        I helped my team crowdfund over $15,000 for members to travel to Sunuka, Tanzania to implement and design a new water irrigation system that will provide instant access to water and
-        increase agriculture, i.e. crop yield, within the community.</h2>
+    <div class="child2">
+      <h2 class ="github">Check out my <a href="https://github.com/daisyshu" target="_blank">GitHub</a> for more!</h2>
     </div>
-
-    <div class="child1">
-      <h2 class="description">I headed a team of four: two front-end developers (including myself), a back-end developer, and a UI designer to create an iOS app in Swift dedicated to simplify the college dorm laundry process.
-        Laundry Day aims to keep track of other students’ finished laundry loads, broken machines, contains a “to-wash” list and a convenient machine timer, so students will never forget to take out their laundry.</h2>
-    </div>
-
-    <h2 class ="github">Check out my <a href="https://github.com/daisyshu" target="_blank">GitHub</a> for more!</h2>
 
   </div>
 
@@ -397,7 +409,7 @@ $(document).ready(function(){
     <div class="container">
       <ul class="skills1">
       <div class="background">
-        <li>HTML5</li><li class="flower">&#10048;&#10048;&#10048;&#10048;&#10048;</li>
+        <li class="html5">HTML5</li><li class="flower">&#10048;&#10048;&#10048;&#10048;&#10048;</li>
       </div>
       <div class="background">
         <li class="css">CSS</li><li class="flower">&#10048;&#10048;&#10048;&#10048;&#10048;</li>
@@ -464,10 +476,54 @@ $(document).ready(function(){
         </div>
 
         <div class="submit">
-          <button class="btn"><a href="mailto:dds86@cornell.com"><span>Send Message</span></a></button>
+          <button class="btn"><a href="mailto: dds86@cornell.com"><span>Send Message</span></a></button>
         </div>
       </div>
     </form>
+
+    
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css" type="text/css"/>
+    <!-- Promise polyfill script required to use Mapbox GL Geocoder in IE 11 -->
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
+    
+    <div id="geocoder" class="geocoder"></div>
+    <div id="map"></div>
+       
+    <script type="text/javascript">
+    mapboxgl.accessToken = 'pk.eyJ1IjoiZGFpc3lzaHUiLCJhIjoiY2s5ZzR3MHBtMGs2eDNtbm9wYThwa2EwMyJ9.oXIcS9gypRvv8wdyRxI1ag';
+    var DaisyShu = [-76.4735, 42.4534];
+    var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v11',
+    center: DaisyShu,
+    zoom: 10
+    });
+       
+    var geocoder = new MapboxGeocoder({
+    accessToken: mapboxgl.accessToken,
+    mapboxgl: mapboxgl
+    });
+       
+    document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
+
+    // create the popup
+    var popup = new mapboxgl.Popup({ offset: 25 }).setHTML(
+    '<h4>' + 'Contact Me!' + '</h4><p>' + '</p>' + 'Email: dds86@cornell.edu' + '</p>' +
+    '<p>' + 'Cell: (617) 461-5599' + '</p>'
+    );
+    
+    // create DOM element for the marker
+    var el = document.createElement('div');
+    el.id = 'marker';
+    
+    // create the marker
+    new mapboxgl.Marker(el)
+    .setLngLat(DaisyShu)
+    .setPopup(popup) // sets a popup on this marker
+    .addTo(map);
+    </script>
 
   </div>
 

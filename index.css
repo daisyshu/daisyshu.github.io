@@ -707,7 +707,7 @@ body {
 }
 #projects div.child {
   width: 560px;
-  height: 360px;
+  height: 355px;
   background-color: rgba(239, 187, 204, 0.3);
   line-height: 30px;
 }
@@ -716,17 +716,18 @@ body {
   text-align: center;
   background-color: rgba(239, 187, 204, 0.4);
   width: 1064px;
-  height: 105px;
+  height: 120px;
   padding-left: 30px;
   padding-right: 30px;
   padding-top: -40px;
   padding-bottom: 30px;
   margin-top: 5px;
+  line-height: 25px;
 }
 #projects div.child1 {
   width: 560px;
   background-color: rgba(239, 187, 204, 0.2);
-  line-height: 30px;
+  line-height: 25px;
 }
 #projects div.child0 img.SPE {
   width: 90px;
@@ -790,8 +791,8 @@ body {
   font-family: 'Old Standard TT', sans-serif;
   font-size: 16px;
   padding: 35px 35px;
-  padding-left: 110px;
-  padding-right: 110px;
+  padding-left: 115px;
+  padding-right: 115px;
   height: 265px;
   vertical-align: middle;
   margin: 0px;
@@ -802,7 +803,7 @@ body {
   font-family: 'Old Standard TT', sans-serif;
   font-size: 16px;
   padding: 35px 35px;
-  height: 265px;
+  height: 220px;
   vertical-align: middle;
   margin: 0px;
   margin-top: 5px;
@@ -965,6 +966,7 @@ body {
   content: "\2212";
   color: black;
 }
+
 
 #skills {
   width: 100%;
@@ -1245,10 +1247,24 @@ body {
 }
 
 @media screen and (min-width: 1000px) and (max-width: 1123px) {
+  #projects div.block #third {
+    height: 215px;
+  }
+  #projects div.child0 {
+    width: 500px;
+  }
+  #projects div.child00 {
+    width: 500px;
+    height: 195px;
+  }
+  #projects div.child00 h2.description {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
   #projects div.child2 {
     width: 500px;
   }
-
+  
   #education div.child {
     width: 600px;
     height: 125%;
@@ -1312,6 +1328,20 @@ body {
     width: 82%;
   }
 
+  #projects div.block #third {
+    height: 215px;
+  }
+  #projects div.child0 {
+    width: 500px;
+  }
+  #projects div.child00 {
+    width: 500px;
+    height: 195px;
+  }
+  #projects div.child00 h2.description {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
   #projects div.child2 {
     width: 500px;
   }
@@ -1560,23 +1590,26 @@ body {
     width: 420px;
     height: 470px;
   }
+  #work #hp {
+    height: 320px;
+  }
   #work #registrar {
-    height: 340px;
+    height: 410px;
   }
   #work #gwc {
-    height: 280px;
+    height: 200px;
   }
   #work #alzheimer {
-    height: 370px;
+    height: 350px;
   }
   #work #pandora {
-    height: 390px;
+    height: 380px;
   }
   #work #newton {
-    height: 230px;
+    height: 200px;
   }
   #work #sunrise {
-    height: 330px;
+    height: 320px;
   }
   #work div.child h2.organization {
     padding-left: 30px;
@@ -1594,19 +1627,30 @@ body {
   #projects {
     padding: 130px 0px;
   }
+  #projects div.child0 {
+    width: 360px;
+    height: 320px;
+  }
+  #projects div.child00 {
+    width: 360px;
+    height: 245px;
+  }
   #projects div.child {
     width: 420px;
-    height: 420px;
+    height: 410px;
   }
   #projects div.child1 {
     width: 420px;
-    height: 400px;
+    height: 415px;
   }
   #projects div.child2 {
     width: 360px;
   }
   #projects div.block #second {
-    height: 370px;
+    height: 355px;
+  }
+  #projects div.block #third {
+    height: 270px;
   }
   #projects div.child h2.organization {
     padding-left: 30px;
@@ -1615,6 +1659,10 @@ body {
   #projects div.child h2.position {
     padding-left: 30px;
     padding-right: 30px;
+  }
+  #projects div.child00 h2.description {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   #leadership {

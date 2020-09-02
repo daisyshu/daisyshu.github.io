@@ -891,6 +891,9 @@ body {
   margin: auto;
   padding-top: 25px;
 }
+#leadership div.ecs img.cu {
+  margin-top: 10px;
+}
 #leadership div.caption h2 {
   text-align: center;
   padding-left: 20px;
@@ -1420,6 +1423,10 @@ body {
     width: 190px;
     height: 210px;
   }
+  #leadership div.ecs img.cu {
+    height: 190px;
+    margin-top: 20px;
+  }
   #leadership div.ecs img.KD {
     width: 160px;
   }
@@ -1672,6 +1679,10 @@ body {
   #leadership div.ecs img {
     width: 190px;
     height: 210px;
+  }
+  #leadership div.ecs img.cu {
+    height: 190px;
+    margin-top: 20px;
   }
   #leadership div.ecs img.KD {
     width: 160px;

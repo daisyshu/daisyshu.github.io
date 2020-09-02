@@ -14,24 +14,50 @@
 </head>
 
 <body>
-
-  <header id="header">
+  <!-- <div class="nav-container">
     <div id="logo"><a href="">Daisy Shu</a></div>
-      <nav id="nav">
-        <a href="#welcome" class="active" title="Home">Home</a>
-        <a href="#intro" class ="notbutton" title="About Me">About Me</a>
-        <a href="#education" class ="notbutton" title="Education">Education</a>
-        <div class="dropdown" id="all">
-          <button class="dropbtn" id="button"><a href="#experience" title="Experience">Experience</a></button>
-          <div class="dropdown-content" id="drop">
-            <a href="#work" class="button" title="Work Experience">Work Experience</a>
-            <a href="#projects" class="button" title="Projects">Projects</a>
-            <a href="#leadership" class="button" title="Leadership">Leadership</a>
-            <a href="#skills" class="button" title="Skills">Skills</a>
+    <nav id="nav" class="nav">
+      <ul class="navlinks">
+        <li><a href="#welcome" class="active" title="Home">Home</a></li>
+        <li><a href="#intro" class ="notbutton" title="About Me">About Me</a></li>
+        <li><a href="#education" class ="notbutton" title="Education">Education</a></li>
+        <li><a href="#experience" id="ex" title="Experience">Experience</a>
+          <ul class="nav-dropdown" id="all">
+              <li><a href="#work" class="button" title="Work Experience">Work Experience</a></li>
+              <li><a href="#projects" class="button" title="Projects">Projects</a></li>
+              <li><a href="#leadership" class="button" title="Leadership">Leadership</a></li>
+              <li><a href="#skills" class="button" title="Skills">Skills</a></li>
+          </ul>
+        </li>
+        <li><a href="#contact-me" class ="notbutton" title="Contact Me">Contact Me</a></li>
+      </ul>
+      <div class="nav-mobile">
+        <span class="navTrigger">
+          <i></i>
+          <i></i>
+          <i></i>
+      </span>
+      </div>
+    </nav> -->
+
+    <header id="header">
+      <div id="logo"><a href="">Daisy Shu</a></div>
+        <nav id="nav">
+          <a href="#welcome" class="active" title="Home">Home</a>
+          <a href="#intro" class ="notbutton" title="About Me">About Me</a>
+          <a href="#education" class ="notbutton" title="Education">Education</a>
+          <div class="dropdown" id="all">
+            <button class="dropbtn" id="button"><a href="#experience" title="Experience">Experience</a></button>
+            <div class="dropdown-content" id="drop">
+              <a href="#work" class="button" title="Work Experience">Work Experience</a>
+              <a href="#projects" class="button" title="Projects">Projects</a>
+              <a href="#leadership" class="button" title="Leadership">Leadership</a>
+              <a href="#skills" class="button" title="Skills">Skills</a>
+            </div>
           </div>
-        </div>
-        <a href="#contact-me" class ="notbutton" title="Contact Me">Contact Me</a>
-      </nav>
+          <a href="#contact-me" class ="notbutton" title="Contact Me">Contact Me</a>
+        </nav>
+        
       
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
       <script type="text/javascript">
@@ -93,8 +119,8 @@
         });
 
       }
-        </script>
-  </header>
+    </script>
+</header>
 
 
   <div id="welcome">
@@ -168,7 +194,7 @@
     <div class="education">
 
       <div class="school">
-        <p class="college-intro">I am a rising junior studying <a href="https://www.cs.cornell.edu/" target="_blank">Computer Science</a> in the <a href="https://www.engineering.cornell.edu/" target="_blank">College of Engineering</a> at <a href="https://www.cornell.edu/" target="_blank">Cornell University</a>.</p>
+        <p class="college-intro">I am a junior studying <a href="https://www.cs.cornell.edu/" target="_blank">Computer Science</a> in the <a href="https://www.engineering.cornell.edu/" target="_blank">College of Engineering</a> at <a href="https://www.cornell.edu/" target="_blank">Cornell University</a>.</p>
         <div class="college">
           <div class="layer"></div>
           <a href="https://www.cornell.edu/" target="_blank"><img class="college-logo" src="images/cornell_logo.png" width="150" height="150"/></a>
@@ -200,6 +226,18 @@
 
   <div id="work">
     <h1 class="header">Work Experience</h1>
+
+    <div class="child">
+      <h2 class="organization">HP</h2>
+      <h2 class="position">HP Summer Scholar Intern</h2>
+      <h2 class="place">Home</h2>
+      <h2 class="time">June 2020-July 2020</h2>
+    </div>
+    <div class="child1" id="hp">
+      <h2 class="description">I actively participated in a six-week professional development program on Personal Systems, Gaming, Print, Software & Data Analytics, Supply Chain, and Sales.
+        I explored technology in core business areas, and learned so much from the amazing top senior leaders from HP.</h2>
+    </div>
+
     <div class="child">
       <h2 class="organization">Cornell Engineering Registrar</h2>
       <h2 class="position">Student Administrator</h2>
@@ -208,18 +246,18 @@
     </div>
     <div class="child1" id="registrar">
       <h2 class="description">This is my current on-campus job. I assist with paperwork regarding Engineering students adding/dropping classes, petitioning credits, room reservations or changes,
-        and any concerns they may have. I am also responsible for answering phone calls from students and faculty.</h2>
+        and any concerns they may have. I am also responsible for answering phone calls from students and faculty. Due to the pandemic, it is still uncertain if student workers for the Cornell
+        Engineering Registrar will be needed.</h2>
     </div>
 
     <div class="child">
       <h2 class="organization">Girls Who Code (GWC)</h2>
       <h2 class="position">Volunteer</h2>
       <h2 class="place">Ithaca, NY</h2>
-      <h2 class="time">September 2019-December 2019</h2>
+      <h2 class="time">September 2019-Present</h2>
     </div>
     <div class="child1" id="gwc">
-      <h2 class="description">I assisted high school students enrolled in GWC classes with JavaScript projects from Khan Academy.
-        I gave weekly presentations on coding fundamentals in JavaScript and debugged student projects.</h2>
+      <h2 class="description">I administered weekly presentations on JavaScript fundamentals and assisted high school students on JavaScript projects.</h2>
     </div>
 
     <div class="child">
@@ -233,7 +271,7 @@
         Bentley University, and St. Mark’s School.
         I imported various datasets to TensorFlow to create neural networks in Jupyter Notebook.
         I also taught Roblox and Imaginative Game Design to students ages 9-12 and Scratch to students ages 7-9.
-        I enjoyed preparing each student to create course-specific final projects to present at weekly family showcase.</h2>
+        I enjoyed preparing each student to present course-specific final projects at weekly family showcase.</h2>
     </div>
 
     <div class="child">
@@ -243,10 +281,11 @@
       <h2 class="time">May 2017-August 2017</h2>
     </div>
     <div class="child1" id="alzheimer">
-      <h2 class="description">I planned the largest annual fundraising and public awareness event in Greater Boston and raised over $1.3 million
-        for non-profit organization.
-        I cultivated relationships with local institutions and regional companies to gain corporate sponsorships and wrote macros in Excel VBA
-        to streamline outreach to past and new walkers using the mailing list.</h2>
+      <h2 class="description">I planned the largest annual fundraising and public awareness event in Greater Boston and raised over $1.4 million
+        for the non-profit organization.
+        I cultivated relationships with local institutions and regional companies to gain corporate sponsorships. I also wrote Excel macros
+        to streamline outreach to past and new walkers on mailing lists.
+      </h2>
     </div>
 
     <div class="child">
@@ -289,6 +328,22 @@
     <h1 class="header">Projects</h1>
 
     <div class="block">
+      <div class="child0" id="zero">
+        <h2 class="organization">Stock Portfolio Optimization Engine</h2>
+        <h2 class="position">Personal Project</h2>
+        <h2 class="place">Home</h2>
+        <h2 class="time">May 2020</h2>
+        <a href="https://github.com/daisyshu/stock-portfolio-engine" target="_blank"><img src="images/github.png" class="SPE"></a>
+      </div>
+
+      <div class="child00">
+        <h2 class="description">I developed a real-time stock lookup system, in which users customize and optimize their portfolios using Yahoo Finance data.
+          I ensured the engine projects stock statistics, portfolio annualized expected returns, volatility, and visualizations. I executed portfolio
+          optimization techniques in Python, including maximizing Sharpe ratio or minimizing volatility.</h2>
+      </div>
+    </div>
+
+    <div class="block">
       <div class="child" id="first">
         <h2 class="organization">Engineers Without Borders - Project Team</h2>
         <h2 class="position">Business and Design Subteam Member</h2>
@@ -298,10 +353,11 @@
       </div>
 
       <div class="child1">
-        <h2 class="description">I worked on redesigning the team website using Fetch, created team poster, updated news on social media platforms, and designed team apparel
-          I attended technical workshops on LaTeX, Microsoft Azure, GitHub, and Neural Network.
-          I helped my team crowdfund over $15,000 for members to travel to Sunuka, Tanzania to implement and design a new water irrigation system that will provide instant access to water and
-          increase agriculture, i.e. crop yield, within the community.</h2>
+        <h2 class="description">I redesigned the team website using Cyberduck, and built alumni page using Mapbox GL JS and Google Sheets API.
+          I oversaw technical workshops on LaTeX, Microsoft Azure, GitHub, Neural Networks, Linear Programming, and Excel.
+          I helped my team crowdfund over $25,000 for members to travel to Sunuka, Tanzania to implement and design a water irrigation system that will
+          provide instant access to water and increase agriculture, i.e. crop yield, within the community.
+          Other responsibilities included creating team poster, updating news on social media platforms, and designing semester team apparel.</h2>
       </div>
     </div>
 
@@ -316,7 +372,7 @@
 
       <div class="child1">
         <h2 class="description">I headed a team of four: two front-end developers (including myself), a back-end developer, and a UI designer to create an iOS app in Swift dedicated to simplify the college dorm laundry process.
-          Laundry Day aims to keep track of other students’ finished laundry loads, broken machines, contains a “to-wash” list and a convenient machine timer, so students will never forget to take out their laundry.</h2>
+          Laundry Day aims to keep track of other students’ finished laundry loads, "to-wash" lists, convenient machine timer, and broken machines, so students will never forget to take out their laundry.</h2>
       </div>
     </div>
 
@@ -331,7 +387,19 @@
     <div class="college-ecs">
 
       <div class="ecs">
-        <a href="https://swe.cornell.edu/" target="_blank"><img src="images/swe_logo.png" width="230px" height="240px"></a>
+        <a href="https://scl.cornell.edu/residential-life/new-student-programs/new-student-orientation" target="_blank"><img src="images/cornell_logo.png" width="205px" height="210px"></a>
+        <div class="caption">
+          <h2>Cornell University Admissions</h2>
+          <p>Orientation Leader</p>
+        </div>
+        <div class="accordion">Read More</div>
+        <div class="panel">
+          <p>I advised freshman students and aided their transition to college during orientation week through multiple virtual meetings.</p>
+        </div>
+      </div>
+
+      <div class="ecs">
+        <a href="https://swe.cornell.edu/" target="_blank"><img src="images/swe_logo.png" width="200px" height="210px"></a>
         <div class="caption">
           <h2>Society of Women Engineers (SWE)</h2>
           <p>Faculty Relations Officer</p>
@@ -344,20 +412,20 @@
       </div>
 
       <div class="ecs">
-        <a href="https://www.classcouncil.cornell.edu/" target="_blank"><img src="images/cc_logo.png" width="230px" height="240px"></a>
+        <a href="https://www.classcouncil.cornell.edu/" target="_blank"><img src="images/cc_logo.png" width="200px" height="210px"></a>
         <div class="caption">
           <h2>Cornell University Class Councils</h2>
           <p>Class of 2022 Representative</p>
         </div>
         <div class="accordion">Read More</div>
         <div class="panel">
-          <p>I helped plan and organize events that foster unity for the Class of 2022 class that enriches student experience,
+          <p>I helped plan and organize events to foster unity for the Class of 2022 that enriches student experience,
             such as the Pink Gala, Pups n’ Prelims, Convocation, Senior Days and many other philanthropy and fundraising events.</p>
         </div>
       </div>
 
       <div class="ecs">
-        <a href="http://cornell.kappadelta.org/" target="_blank"><img src="images/kd_logo.png" class="KD" width="190px" height="240px"></a>
+        <a href="http://cornell.kappadelta.org/" target="_blank"><img src="images/kd_logo.png" class="KD" width="160px" height="210px"></a>
         <div class="caption">
           <h2>Kappa Delta Sorority</h2>
           <p>Events Chair</p>
@@ -531,6 +599,36 @@
     <h2><a href="#welcome" target="_parent">&lt; Back to Top ></a></h2>
     <h3>&#169; 2020 Daisy Shu</h3>
   </div>
+
+  <!-- <script>
+    (function($) {
+        $(function() {
+          $('#nav ul li > a:not(:only-child)').click(function(e) {
+            $(this).siblings('#nav ul.nav-dropdown').toggle();
+            $('#nav ul.nav-dropdown').not($(this).siblings()).hide();
+            e.stopPropagation();
+          });
+          $('html').click(function() {
+            $('#nav ul.nav-dropdown').hide();
+          });
+          $('#nav #nav-toggle').on('click', function() {
+            this.classList.toggle('active');
+          });
+          $('#nav #nav-toggle').click(function() {
+        $('#nav ul').toggle();
+      });
+        });
+      })(jQuery);
+  </script> -->
+
+  <script>
+    $('#nav span.navTrigger').click(function () {
+    $(this).toggleClass('active');
+    console.log("Clicked menu");
+    $("#mainListDiv").toggleClass("show_list");
+    $("#mainListDiv").fadeIn();
+  });
+  </script>
 
 
 </body>

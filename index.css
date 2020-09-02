@@ -5,6 +5,129 @@ body {
   overflow-x: hidden;
 }
 
+/* div.nav-container {
+  width: 100%;
+  background-color: white;
+  height: 80px;
+  position: fixed;
+  white-space: nowrap;
+  z-index: 20;
+}
+
+#logo a {
+  color: #E64398;
+  text-decoration: none;
+  float: left;
+  font-size: 45px;
+  margin-top: 10px;
+  margin-left: 90px;
+  font-family: 'Lily Script One', sans-serif;
+  padding-right: 25px;
+}
+#nav {
+  width: auto;
+  float: right;
+  white-space: nowrap;
+  z-index: 10;
+  margin-right: 100px;
+}
+#nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#nav ul li {
+  float: left;
+  position: relative;
+  margin-top: 30px;
+  margin-right: 22px;
+}
+#nav ul li a {
+  color: #E64398;
+  opacity: 1;
+  font-size: 25px;
+  font-family: 'Katibeh', sans-serif;
+  text-decoration: none;
+  display: block;
+}
+#nav ul li a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  margin-top: 30px;
+  visibility: hidden;
+  background-color: #E64398;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+#nav ul li a:hover::before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+#nav ul li a:hover {
+  color: #E64398;
+  opacity: 0.7;
+}
+#nav ul li a.active {
+  opacity: 0.7;
+  border-bottom: 2px solid #E64398;
+}
+#nav ul li a:visited {
+  text-decoration: none;
+}
+#nav ul.nav-dropdown {
+  display: none;
+  position: absolute;
+  background-color: white;
+  width: 170px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 20;
+  height: 230px;
+}
+#nav ul.nav-dropdown li {
+  margin-top: 0px;
+}
+#nav ul.nav-dropdown li a {
+  color: #E64398;
+  display: block;
+  margin-top: 10px;
+  text-decoration: none;
+  border: none;
+  padding: 15px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+}
+#nav ul.nav-dropdown li a:hover {
+  background-color: transparent;
+  text-decoration: none;
+  color: #E64398;
+  opacity: 0.7;
+}
+#nav ul li:hover ul.nav-dropdown {
+  display: block;
+}
+#nav ul.nav-dropdown:hover > #nav ul li {
+  color: #E64398;
+  opacity: 0.7;
+}
+#nav ul.nav-dropdown li a:hover::before {
+  visibility: hidden;
+}
+#nav div.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: white;
+  height: 80px;
+  width: 80px;
+} */
+
+
 #header {
   width: 100%;
   background-color: white;
@@ -573,16 +696,43 @@ body {
   text-align: center;
   vertical-align: middle;
 }
+#projects div.child0 {
+  display: inline-block;
+  text-align: center;
+  background-color: rgba(239, 187, 204, 0.5);
+  width: 1064px;
+  height: 285px;
+  padding: 30px;
+  margin-top: 5px;
+}
 #projects div.child {
   width: 560px;
   height: 360px;
-  background-color: rgba(205, 123, 230, 0.137);
+  background-color: rgba(239, 187, 204, 0.3);
   line-height: 30px;
+}
+#projects div.child00 {
+  display: inline-block;
+  text-align: center;
+  background-color: rgba(239, 187, 204, 0.4);
+  width: 1064px;
+  height: 105px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: -40px;
+  padding-bottom: 30px;
+  margin-top: 5px;
 }
 #projects div.child1 {
   width: 560px;
-  background-color: rgba(218, 162, 235, 0.137);
+  background-color: rgba(239, 187, 204, 0.2);
   line-height: 30px;
+}
+#projects div.child0 img.SPE {
+  width: 90px;
+  height: 90px;
+  margin-top: 5px;
+  vertical-align: middle;
 }
 #projects div.child img.EWB {
   width: 105px;
@@ -595,8 +745,20 @@ body {
   margin-top: 5px;
   vertical-align: middle;
 }
+#projects div.child0 img:hover {
+  opacity: 0.8;
+}
 #projects div.child img:hover {
   opacity: 0.8;
+}
+#projects div.child0 h2.organization {
+  text-align: center;
+  font-family: 'Didot', sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  vertical-align: middle;
+  margin: 0px;
+  margin-top: 5px;
 }
 #projects div.child h2.organization {
   text-align: center;
@@ -608,27 +770,39 @@ body {
   margin: 0px;
   margin-top: 5px;
 }
-#projects div.child h2.position {
+#projects div.child0 h2.position, div.child h2.position {
   text-align: center;
   font-family: 'Didot', sans-serif;
   font-size: 22px;
 }
-#projects div.child h2.place {
+#projects div.child0 h2.place, div.child h2.place {
   text-align: center;
   font-family: 'Spectral', sans-serif;
   font-size: 18px;
 }
-#projects div.child h2.time {
+#projects div.child0 h2.time, div.child h2.time {
   text-align: center;
   font-family: 'Spectral', sans-serif;
   font-size: 18px;
+}
+#projects div.child00 h2.description {
+  text-align: justify;
+  font-family: 'Old Standard TT', sans-serif;
+  font-size: 16px;
+  padding: 35px 35px;
+  padding-left: 110px;
+  padding-right: 110px;
+  height: 265px;
+  vertical-align: middle;
+  margin: 0px;
+  margin-top: 5px;
 }
 #projects div.child1 h2.description {
   text-align: justify;
   font-family: 'Old Standard TT', sans-serif;
   font-size: 16px;
   padding: 35px 35px;
-  height: 240px;
+  height: 265px;
   vertical-align: middle;
   margin: 0px;
   margin-top: 5px;
@@ -636,7 +810,7 @@ body {
 #projects div.child2 {
   display: inline-block;
   text-align: center;
-  background-color: rgba(249, 243, 255, 0.4);
+  background-color: rgba(239, 187, 204, 0.1);
   width: 1064px;
   height: 30px;
   padding: 30px;
@@ -679,7 +853,7 @@ body {
 }
 #leadership div.ecs {
   display: inline-block;
-  width: 305px;
+  width: 280px;
   height: auto;
   background-color: rgb(255, 255, 255);
   box-shadow: 0 1px 2px rgba(0,0,0,0.07),
@@ -721,7 +895,7 @@ body {
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 10px;
-  font-size: 26px;
+  font-size: 23px;
   font-family: 'Abril Fatface', sans-serif;
   color: #000;
   letter-spacing: 1px;
@@ -729,7 +903,7 @@ body {
 #leadership div.caption p {
   text-align: center;
   padding: 10px 20px;
-  font-size: 20px;
+  font-size: 18px;
   font-family: 'Spectral', sans-serif;
   color: #000;
 }
@@ -741,7 +915,7 @@ body {
   color: #fff;
   cursor: pointer;
   padding: 15px;
-  width: 88.9%;
+  width: 87.7%;
   text-align: left;
   border: 2px solid white;
   border-radius: 10px;
@@ -762,7 +936,7 @@ body {
   padding: 0 18px;
   background-color: white;
   overflow: hidden;
-  width: 267px;
+  width: 242px;
   max-height: 0;
   opacity: 0;
   transition: 0.6 ease-in-out;

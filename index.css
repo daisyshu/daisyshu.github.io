@@ -1123,11 +1123,16 @@ body {
   width: 48%;
   float: left;
   margin-right: 4%;
+  font-family: 'Courier Prime', monospace;
 }
 #contact-me div.email input, div.msg textarea {
   width: 48%;
   float: left;
   margin-right: 4%;
+  font-family: 'Courier Prime', monospace;
+}
+#contact-me div.subject input {
+  font-family: 'Courier Prime', monospace;
 }
 #contact-me div.email input:last-child, div.msg textarea:last-child {
   margin-right: 0;
@@ -1153,6 +1158,7 @@ body {
   border-radius: 5px;
   margin-left: 100px;
   margin-top: 70px;
+  border-color: #E64398;
 }
 #contact-me div.submit button.btn span {
   cursor: pointer;
